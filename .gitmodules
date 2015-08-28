@@ -4,3 +4,6 @@
 [submodule "modules/backend"]
 	path = modules/backend
 	url = git@github.com:chrhuff/codingdojo-backend.git
+[submodule "modules/app"]
+	path = modules/app
+	url = git@github.com:chrhuff/codingdojo-app.git
