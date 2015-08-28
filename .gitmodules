@@ -1,3 +1,6 @@
 [submodule "modules/docker"]
 	path = modules/docker
 	url = git@github.com:chrhuff/codingdojo-docker.git
+[submodule "modules/backend"]
+	path = modules/backend
+	url = git@github.com:chrhuff/codingdojo-backend.git
