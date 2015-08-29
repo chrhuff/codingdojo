@@ -14,6 +14,7 @@ Klonen mit
 
 GITHub mit ssh private key
 
+```
 $ cat ~/.ssh/config
 Host github.com
   IdentityFile ~/.ssh/id_rsa_github
@@ -70,4 +71,5 @@ Response: ActionResult oder 204 wenn nicht existierende Session angesprochen wur
 	],
 	"status" : "CONTINUE"
 }
+```
 
