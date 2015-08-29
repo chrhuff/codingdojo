@@ -18,9 +18,13 @@ GITHub mit ssh private key
 $ cat ~/.ssh/config
 Host github.com
   IdentityFile ~/.ssh/id_rsa_github
+```
 
 
 Rest-Calls:
+
+initGame
+```
 content-type: application/json 
 
 http://localhost:8080/mining-service/minesweeper/initGame
@@ -31,7 +35,10 @@ POST
 "mineRatio" : 0.2
 }
 Response: {sessid}
+```
 
+submitAction
+```
 http://localhost:8080/mining-service/minesweeper/submitAction/{sessid}
 PUT
 {
