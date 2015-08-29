@@ -77,6 +77,9 @@ Response: ActionResult oder 204 wenn nicht existierende Session angesprochen wur
 	}
 	],
 	"status" : "CONTINUE"
+	//CONTINUE -> 0
+	//GAMEOVER -> 1
+	//VICTORY  -> 2
 }
 ```
 
