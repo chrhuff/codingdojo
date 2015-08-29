@@ -83,3 +83,39 @@ Response: ActionResult oder 204 wenn nicht existierende Session angesprochen wur
 }
 ```
 
+currentGameState
+```
+http://localhost:8080/mining-service/minesweeper/currentGameState/42
+GET
+
+Response: ActionResult oder 204 wenn nicht existierende Session angesprochen wurde
+{
+	"visibleCells" : [{
+	"y" : 0,
+	"x" : 0,
+	"mine" : null,
+	"flagged" : false,
+	"number" : -1
+	}, {
+	"y" : 1,
+	"x" : 0,
+	"mine" : null,
+	"flagged" : false,
+	"number" : -1
+	},
+	....
+	}, {
+	"y" : 14,
+	"x" : 16,
+	"mine" : null,
+	"flagged" : false,
+	"number" : -1
+	}
+	],
+	"status" : "CONTINUE"
+	//CONTINUE -> 0
+	//GAMEOVER -> 1
+	//VICTORY  -> 2
+}
+```
+
