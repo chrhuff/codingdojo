@@ -9,4 +9,4 @@
 	url = git@github.com:chrhuff/codingdojo-app.git
 [submodule "modules/javafx-client"]
 	path = modules/javafx-client
-	url = git@repositories.dragonriders.de:cofinpro/codingdojo.git
+	url = git@github.com:chrhuff/codingdojo-javafx.git
