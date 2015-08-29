@@ -46,10 +46,10 @@ PUT
 "x" : 5,
 "y" : 7
 },
-"type" : 0
-//type 0 -> UNCOVER
-//type 1 -> GAMEOVER
-//type 2 -> VICTORY
+"type" : "UNCOVER"
+//UNCOVER -> 0
+//FLAG    -> 1
+//SOLVE   -> 2
 }
 Response: ActionResult oder 204 wenn nicht existierende Session angesprochen wurde
 
