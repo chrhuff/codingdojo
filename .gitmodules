@@ -7,3 +7,6 @@
 [submodule "modules/app"]
 	path = modules/app
 	url = git@github.com:chrhuff/codingdojo-app.git
+[submodule "modules/javafx-client"]
+	path = modules/javafx-client
+	url = git@github.com:chrhuff/codingdojo-javafx.git

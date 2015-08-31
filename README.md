@@ -27,8 +27,7 @@ initGame
 ```
 content-type: application/json 
 
-http://localhost:8080/mining-service/minesweeper/initGame
-POST
+POST http://localhost:8080/mining-service/minesweeper/
 {
 "width"     : 20,
 "height"    : 15,
@@ -39,17 +38,16 @@ Response: {sessid}
 
 submitAction
 ```
-http://localhost:8080/mining-service/minesweeper/submitAction/{sessid}
-PUT
+PUT http://localhost:8080/mining-service/minesweeper/{sessid}
 {
 "position" : {
 "x" : 5,
 "y" : 7
 },
-"type" : 0
-//type 0 -> UNCOVER
-//type 1 -> GAMEOVER
-//type 2 -> VICTORY
+"type" : "UNCOVER"
+//UNCOVER -> 0
+//FLAG    -> 1
+//SOLVE   -> 2
 }
 Response: ActionResult oder 204 wenn nicht existierende Session angesprochen wurde
 
@@ -77,6 +75,45 @@ Response: ActionResult oder 204 wenn nicht existierende Session angesprochen wur
 	}
 	],
 	"status" : "CONTINUE"
+	//CONTINUE -> 0
+	//GAMEOVER -> 1
+	//VICTORY  -> 2
+}
+```
+
+currentGameState
+```
+GET http://localhost:8080/mining-service/minesweeper/42
+
+
+Response: ActionResult oder 204 wenn nicht existierende Session angesprochen wurde
+{
+	"visibleCells" : [{
+	"y" : 0,
+	"x" : 0,
+	"mine" : null,
+	"flagged" : false,
+	"number" : -1
+	}, {
+	"y" : 1,
+	"x" : 0,
+	"mine" : null,
+	"flagged" : false,
+	"number" : -1
+	},
+	....
+	}, {
+	"y" : 14,
+	"x" : 16,
+	"mine" : null,
+	"flagged" : false,
+	"number" : -1
+	}
+	],
+	"status" : "CONTINUE"
+	//CONTINUE -> 0
+	//GAMEOVER -> 1
+	//VICTORY  -> 2
 }
 ```
 
