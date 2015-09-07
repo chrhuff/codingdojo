@@ -27,8 +27,7 @@ initGame
 ```
 content-type: application/json 
 
-http://localhost:8080/mining-service/minesweeper/initGame
-POST
+POST http://localhost:8080/mining-service/minesweeper/
 {
 "width"     : 20,
 "height"    : 15,
@@ -39,8 +38,7 @@ Response: {sessid}
 
 submitAction
 ```
-http://localhost:8080/mining-service/minesweeper/submitAction/{sessid}
-PUT
+PUT http://localhost:8080/mining-service/minesweeper/{sessid}
 {
 "position" : {
 "x" : 5,
@@ -85,8 +83,8 @@ Response: ActionResult oder 204 wenn nicht existierende Session angesprochen wur
 
 currentGameState
 ```
-http://localhost:8080/mining-service/minesweeper/currentGameState/42
-GET
+GET http://localhost:8080/mining-service/minesweeper/42
+
 
 Response: ActionResult oder 204 wenn nicht existierende Session angesprochen wurde
 {
